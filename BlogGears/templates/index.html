@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{%load static%}
+
+{%block css_style%}
+    <link rel="stylesheet" href="{% static "index.css" %}">
+{%endblock css_style%}
+
+{% block main_body%}
+<div id='landing'>
+    <img src="{% static "landing.jpg" %}" alt="">
+</div>
+<section id='upperbody'>
+<main>
+    <h2>Welcome to Stacy's Blog</h2>
+    <p>Join us on a journey of exploration and self-discovery as we delve into the latest trends and timeless topics."</p>
+</main>
+<section id='aboutme'>
+    <div>        
+        <cite>–Elijah Wood</cite>
+        <h3>"The story ends up being a journey of self-discovery."</h3>
+        <p>Have u ever felt if u knew little more your life would be easier? </p>
+        
+    </div>
+    <div id='divider'></div>
+        <p>Connect with Me on Social media platforms </p>
+</section>
+
+</section>
+
+
+{% endblock main_body%}
+
+{% block js_block %}
+    <script src="{% static "index.js" %}" defer></script>
+{% endblock js_block%}

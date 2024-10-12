@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_style%}
+    <link rel="stylesheet" href="{% static "blogGears/css/showAll.css" %}">
+{% endblock css_style %}
+
+{% block main_body%}
+ 
+<section id='all_posts'>
+    {% for e in articles %}
+        <div>
+            <img src="{% static "opm.png" %}" alt="">
+             <article>{{e| title}}</article>  
+             <a href="{% url "post_detail_page" slug="wonderlust" %}">Open details</a>
+        </div>
+    {% endfor %}
+</section> 
+
+{% endblock main_body %}

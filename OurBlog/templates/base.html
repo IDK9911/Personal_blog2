@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block pg_title %}{%endblock pg_title%}</title>
+
+    <!--internal css-->
+    <style>
+
+    </style>
+
+    <link rel="stylesheet" href="{% static "app.css" %}">
+    <link rel="stylesheet"  href="{% static "ourBlog/css/partials/header.css" %}">
+    <!--external css stylesheet-->
+    {% block css_style%}
+
+    {%endblock css_style%}
+</head>
+<body>    
+<!--navbar-->
+{% include "ourBlog/partials/header.html" %}
+{%block main_body%}
+
+{% endblock main_body %}
+<!--internal js-->
+    
+<section id='quote_section'>
+
+</section>
+
+
+<script>
+    console.log('internal script working')
+</script>
+<!--Third party scripts-->
+<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script> <!-- https://github.com/axios/axios#installing  link for Axios documentation-->
+<!--external js-->
+<script src='{% static "app.js" %}'></script>
+{% block js_block%}
+
+{% endblock js_block%}
+</body>
+</html>
+
+
