@@ -3,10 +3,13 @@
 
 {% block css_style%}
     <link rel="stylesheet" href="{% static "blogGears/css/showAll.css" %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=favorite" />
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=comment" />
 {% endblock css_style %}
 
 {% block main_body%}
- 
+{% comment %}  
 <section id='all_posts'>
     {% for e in articles %}
         <div>
@@ -15,6 +18,91 @@
              <a href="{% url "post_detail_page" slug="wonderlust" %}">Open details</a>
         </div>
     {% endfor %}
-</section> 
+</section>  {% endcomment %}
+
+
+<div id="bg_worker">
+        <img src="{% static "landing.jpg" %}" alt="">
+        
+</div>
+
+<div class="grid_layout">
+    <div class="sidebar" style="background-image:url({% static "tree_ona_shore.jpg"%})">
+        <div class="sidebar_content">
+                <input type="text" id='searchbar'>
+                <h4>Categories</h4>
+                <hr>
+                <div class="categories">
+                    <a href="" id="item01">Adventure</a>
+                    <a href="" id="item02">Technology</a>
+                    <a href="" id="item03">Life Hacks</a>
+                    <a href="" id="item04">Experiences</a>
+                    <a href="" id="item05">Book club</a>
+                </div>
+                <div class="trending">
+                    <h4>Trending</h4>
+                </div>
+        </div>
+        
+    </div>
+    <main id='main_body'>
+        <div class="container">
+            {% for e in articles %}
+                <article>
+                    {% comment %} <img src="{% static "opm.png" %}" alt="">
+                        <a href="{% url "post_detail_page" slug="wonderlust" %}">Open details</a>
+                        <hr>
+                            <span class="material-symbols-outlined">
+                                comment
+                            </span>
+                                <span>{{e.comments}}</span>
+                        <p>{{e.title| title}}</p>   {% endcomment %}
+
+                        <div class="card_img">
+                            <img src="{% static "foggy_mountain.jpg" %}" alt="">
+                            
+                        </div>
+                        <div class='card_title'>
+                            {{e.title|title}}
+                        </div>
+                        <div class="card_text">
+                            {{e.text}}
+                            <a href="{% url "post_detail_page" slug="wonderlust" %}">read more</a>
+
+                        </div>
+                        <div class="card_data">
+                           posted on {{e.date}}
+                        </div>
+                        
+                </article>
+        {% endfor %}
+        </div>
+    </main>
+    <footer>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi voluptatem reprehenderit fugit veritatis incidunt quas cupiditate assumenda illo saepe esse ipsa, adipisci tempore accusantium cumque omnis voluptatibus perferendis. Delectus.
+        Dolore, corrupti deserunt. Fugit ducimus sint dolore quasi doloribus exercitationem! Quidem ipsa corporis beatae, eaque sapiente neque ipsam ratione facere quisquam natus quam illum, voluptate doloremque adipisci molestiae ea nostrum.
+        Assumenda, ipsa facilis? Numquam, incidunt eveniet excepturi iusto veniam eaque debitis aliquid architecto tenetur? Magni quibusdam cumque, quae sunt excepturi, alias odit, itaque hic obcaecati sapiente porro amet id perferendis!
+        Omnis eligendi ab et ipsum tempora iure nisi, officia quos? Doloribus placeat facilis cumque minus? Necessitatibus maxime nam aliquam doloremque vero, ut placeat earum laudantium ipsum in blanditiis, laboriosam officia.
+        Nulla voluptatibus, aspernatur animi quia deleniti consectetur voluptate asperiores doloribus quidem, atque at necessitatibus repellendus facere eum odit quaerat cumque excepturi eveniet dignissimos voluptatum a expedita repellat qui dolores? Ratione.
+        Unde ab harum est, modi tempora ullam dolorum totam earum eius, rerum architecto quos non veniam sapiente omnis quas ipsam? Minima aut, unde odio magnam atque laborum aperiam omnis. Reprehenderit.
+        Corporis dolorem sed nisi earum omnis pariatur quasi minima, aliquid blanditiis magni officiis quis debitis incidunt quo suscipit repudiandae ullam nobis natus corrupti totam fugiat soluta! Exercitationem quam velit temporibus?
+        Quisquam quibusdam quod rerum corrupti error voluptatem consectetur cumque dolores pariatur quo consequatur, ipsum repellendus alias consequuntur fugit qui dignissimos itaque officia eveniet. Laudantium eos nesciunt id aut vel necessitatibus?
+        Accusantium quas pariatur eaque iure praesentium sunt aut temporibus autem repudiandae laudantium voluptates, sapiente, sit mollitia placeat officia soluta minima accusamus? Dicta officia voluptatem tenetur, libero voluptas obcaecati saepe facere?
+        Vero odio laboriosam vel dolorem quisquam consequuntur adipisci voluptates neque earum. Aperiam a, similique, eaque eligendi dignissimos architecto dicta commodi provident sequi porro unde blanditiis, eius modi. Earum, harum iste.
+        Nisi iure quis aspernatur maxime facere dolore quae cumque hic sint in optio unde officia rem neque, cum odio tempora? Itaque, totam? Repellendus quae nemo dolorum quas ad necessitatibus aspernatur?
+        Similique animi autem eligendi et quam velit. Minima nam repellat aperiam sunt libero asperiores exercitationem. Saepe corporis, tenetur harum, vel reprehenderit, rem assumenda aut adipisci reiciendis rerum recusandae at incidunt!
+        Earum non perferendis necessitatibus optio enim debitis, autem ipsam quibusdam sint illo ullam hic a fuga eligendi iusto, odio sequi? Dolores culpa ea ducimus soluta blanditiis perferendis, corrupti laborum qui.
+        Ullam pariatur exercitationem ea natus dicta veritatis eveniet ipsa maiores culpa laudantium eos voluptates eaque ut maxime voluptate deleniti, placeat dignissimos? Placeat repudiandae voluptates nisi tenetur labore cupiditate, distinctio quisquam!
+        Omnis, rerum! Officia natus impedit quaerat. Sint quidem nulla minima, tenetur aliquid incidunt est temporibus. Nemo, eaque consequuntur! Eaque blanditiis repellendus, quia perspiciatis nihil laborum aliquam sed non molestiae itaque!
+        Itaque eligendi esse harum dignissimos, voluptas sint animi perferendis eaque, modi aut voluptate odit enim, dolor provident illo quos incidunt nulla corporis mollitia porro debitis aspernatur? Iste dolor impedit recusandae!
+        Ab nihil laboriosam beatae, rem natus velit modi incidunt, maxime dolore ratione commodi ullam autem iusto molestias quia quaerat voluptas eaque numquam optio necessitatibus voluptates officiis quisquam? Dolorum, blanditiis reiciendis.
+        Aperiam dignissimos quos beatae laudantium eveniet quam impedit quasi porro nemo, aliquam numquam omnis perferendis, tenetur earum, autem praesentium et! Et consequatur voluptatum sed porro eaque aliquam, eveniet velit tempore.
+        Perspiciatis similique ea itaque cum voluptatem architecto iusto amet labore nobis enim quod tempora assumenda ut voluptates aspernatur, ab laborum earum ad dolorem? Dolore earum praesentium, reiciendis vero reprehenderit quia?
+        Nulla, distinctio quis doloribus quibusdam eaque accusamus quos vel repellat aperiam nostrum similique, asperiores quod facilis optio quisquam voluptatum rerum eveniet maiores sunt, repudiandae voluptatibus perspiciatis amet! Nostrum, aliquam necessitatibus.
+    </footer>
+
+</div>
+
+
 
 {% endblock main_body %}

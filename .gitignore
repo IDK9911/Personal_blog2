@@ -2,14 +2,15 @@ OurBlog/*
 !OurBlog/views.py
 !OurBlog/urls.py
 !OurBlog/templates/
-!OurBlog/static/*
+!OurBlog/static/
+
 
 
 BlogGears/*
 !BlogGears/views.py
 !BlogGears/urls.py
 !BlogGears/templates/
-!BlogGears/static/*
+!BlogGears/static/
 
 
 db.sqlite3
