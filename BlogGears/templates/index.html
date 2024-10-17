@@ -6,26 +6,50 @@
 {%endblock css_style%}
 
 {% block main_body%}
-<div id='landing'>
-    <img src="{% static "landing.jpg" %}" alt="">
-</div>
-<section id='upperbody'>
-<main id='my_intro'>
-    <h2>Welcome to Stacy's Blog</h2>
-    <p>Join us on a journey of exploration and self-discovery as we delve into the latest trends and timeless topics."</p>
-</main>
-<section id='aboutme'>
-    <div>        
-        <cite>–Elijah Wood</cite>
-        <h3>"The story ends up being a journey of self-discovery."</h3>
-        <p>Have u ever felt if u knew little more your life would be easier? </p>
+
+<section id='behindbody'>
+    <div id='landing'>
+        {% comment %} <img src="{% static "landing.jpg" %}" alt=""> {% endcomment %}
+    </div>
+    <div id='bookimage'>
         
     </div>
-    <div id='divider'></div>
-        <p>Connect with Me on Social media platforms </p>
+    <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==" alt="" width='100px' height='100px'>
+
+
+    <div id='mysvg'>
+        <svg>
+            <clipPath id="heartPath" clipPathUnits="objectBoundingBox">
+                <path d="M0.5,1
+          C 0.5,1,0,0.7,0,0.3
+          A 0.25,0.25,1,1,1,0.5,0.3
+          A 0.25,0.25,1,1,1,1,0.3
+          C 1,0.7,0.5,1,0.5,1 Z" />
+            </clipPath>
+        </svg>         
+
+        
+    </div>
 </section>
 
+<section id='upperbody'>
+    <main id='my_intro'>
+        <h2>Welcome to Stacy's Blog</h2>
+        <p>Join us on a journey of exploration and self-discovery as we delve into the latest trends and timeless topics."</p>
+    </main>
+    <section id='aboutme'>
+        <div>        
+            <cite>–Elijah Wood</cite>
+            <h3>"The story ends up being a journey of self-discovery."</h3>
+            <p>Have u ever felt if u knew little more your life would be easier? </p>
+            
+        </div>
+        <div id='divider'></div>
+            <p>Connect with Me on Social media platforms </p>
+    </section>
+    
 </section>
+
 <hr>
 
 

@@ -4,7 +4,7 @@ img{
     height:200px;
 }
 
-#landing{
+/* #landing{
     position:absolute;
     width:100%;
     height:80%;
@@ -15,24 +15,26 @@ img{
     width:100%;
     height:100%;
     border-radius:2%;
-}
+} */
 /* 
 #my_intro{
 
 } */
 
-main#my_intro{
-    padding:4% 4%;
+#my_intro{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    /* border:2px solid pink; */
 }
+
 #my_intro h2{
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
     font-weight:400;
     font-style: normal;
     font-size:3rem;
-    color:yellow;
+    color:white;
 }
 
 #my_intro h2+p{
@@ -43,9 +45,38 @@ main#my_intro{
     color:white;
     font-size:2rem;
     padding: 2% 0 0 1%;
+    /* filter: blur(2px);
+    -webkit-filter: blur(8px); */
+    position: relative;
 }
 
+#my_intro p::after{
+    content:'';
+    position:absolute;
+    display:block;  
+    width:100%;
+    height:100%;
+    background-color: #00b4d8;
+    z-index:-1;
+    top:0;
+    filter: blur(12px);
+    -webkit-filter: blur(85px);
+
+
+}
+
+
+#my_intro{
+    height:60vh;
+}
+
+
+
 @media(max-width:900px){
+    #my_intro{
+        flex-direction: column;
+        justify-content: flex-end;
+    }
     #my_intro h2{
         font-size: 2rem;
     }
@@ -56,7 +87,6 @@ main#my_intro{
 
 
 #upperbody{
-    height:90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -107,7 +137,38 @@ color:rgb(201, 200, 186);
     border:2px solid rgba(3, 55, 41, 0.736);
     left:50%;
     top:122%;
-    
-    
+}
 
+
+#behindbody{
+    background-color: green;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1670170288845-80e7da6bb933?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position:left 65%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height:60vh;
+    position:absolute;
+    z-index:-1;
+    /* clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 100%); */
+    /* clip-path: polygon(0 0, 95% 0%,100% 25%, 75% 65%, 100% 100%,0 100%); */
+
+    /* clip-path:polygon(0% 0%,0 80%,20% 100%, 70% 70%, 100% 85%,100% 0%);  */
+    
+}
+
+#mysvg{
+    width:25px;
+    height:25px;
+}
+
+#bookimage{
+    background-image: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-clip: url("#heartPath");
+    width:55vh;
+    height:55vw;
+}
+#behindbody img{
+    clip-path: url("#heartPath");
+    /* clip-path: url("#book-clip-path"); */
 }

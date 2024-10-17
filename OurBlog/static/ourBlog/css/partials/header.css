@@ -1,7 +1,14 @@
-#navigation_bar{
+
+#navdesign{
     display:flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+#navigation_bar{
+    position: fixed;
+    width: 100vw;
 }
 
 #navigation_bar a{
@@ -9,6 +16,8 @@
     margin:0px 5% 0px 1%;
     font-size: 1.4rem;
     color:white;
+    z-index:3;  
+
 
 }
 
